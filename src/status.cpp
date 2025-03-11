@@ -7,7 +7,7 @@
 void checkClusterStatus() {
     std::cout << "Fetching cluster status...\n"; // faux loading lol
 
-    const char* command = "sinfo"; // I am assuming that the cluster status is just shorthand for sinfo
+    const char* command = "sinfo"; // I am assuming that the cluster status is just an alias for sinfo
     FILE* pipe = popen(command, "r");
     if (!pipe) { // error in creating a pipe 
         std::cerr << "Error: Unable to fetch cluster status\n"; 
