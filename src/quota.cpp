@@ -11,6 +11,7 @@ void checkQuotaStatus() {
     FILE* pipe = popen(command, "r"); 
     if (!pipe) {
         std::cerr << "Unable to open pipe from terminal input\n";
+        return; 
     }
 
     std::ostringstream result1; 
@@ -24,6 +25,7 @@ void checkQuotaStatus() {
     FILE* pipe2 = popen(command, "r"); 
     if (!pipe2) {
         std::cerr << "Unable to open pipe from terminal input\n";
+        return; 
     }
     
     std::ostringstream result2; 
